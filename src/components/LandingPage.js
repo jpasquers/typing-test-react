@@ -16,6 +16,7 @@ export class LandingPage extends Component {
         return(
             <div className="landing-container">
                 <div className="landing">
+                    {this.renderPreviousScore()}
                     <div className="choose-text">
                         Choose which text to test on:    
                     </div>
@@ -23,6 +24,17 @@ export class LandingPage extends Component {
                 </div>
             </div>
         )
+    }
+
+    /*todo modify if made so can do multiple minutes*/
+    renderPreviousScore() {
+        if (this.props.previouslyPlayed) {
+            return (<div className="previous-text">
+                <div>Your previous # of correct words: {this.props.previousScore.correctWords}</div>
+                <div>Your previous # of incorrect words: {this.props.previousScore.incorrectWords}</div>
+                <div>Your previous WPM: {this.props.previousScore.correctWords - this.props.previousScore.incorrectWords}</div>
+            </div>)
+        }
     }
 
     renderTextOptions() {

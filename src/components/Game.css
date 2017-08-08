@@ -1,3 +1,55 @@
 .active-word {
     color: blue;
 }
+
+.input-words {
+    border: 1px solid rgb(40,40,40);
+    width: 500px;
+    min-height: 100px;
+}
+
+.input-container {
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+.input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.input-visible {
+    border: 1px solid rgb(40,40,40);
+    z-index: 0;
+    background: rgb(210,210,210);
+}
+
+.input-actual {
+    z-index: -1;
+    border: 1px solid red;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+
+.blinking-cursor {
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% {
+        color: black;
+    }
+    50% {
+        color: rgb(200,200,200);
+    }
+
+    100% {
+        color: black;
+    }
+}
