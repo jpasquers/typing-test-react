@@ -1,0 +1,63 @@
+.landing-container {
+    height: 100vh;
+    background: linear-gradient(to bottom right, rgb(73, 193, 129), black);
+}
+
+.landing {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 600px;
+    text-align: center;
+}
+
+.choose-text {
+    color: white;
+    font-size: 20px;
+}
+
+
+.landing button {
+    margin-top: 10px;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.landing button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.3);
+}
+
+.landing button:focus {
+    outline: none;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.option {
+    box-sizing:border-box;
+    padding: 30px;
+    flex: 0 0 auto;
+    color: white;
+    background: rgb(40,40,40);
+    margin: 10px;
+    width: 180px;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.option:hover {
+    cursor: pointer;
+    background: rgb(210,210,210);
+    color: rgb(40,40,40);
+}
